@@ -13,6 +13,10 @@ public class UserRegistration {
         return lastName.matches("^[A-Z][a-z]{2,}$");
     }
 
+    public static boolean validateUserEmail(String userEmail) {
+        return userEmail.matches("^[abc]{3}[.a-z]*[@][bl]{2}[.co]{3}[.a-z]*$");
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -33,6 +37,15 @@ public class UserRegistration {
             System.out.println("Invalid Last Name");
         } else {
             System.out.println("Last Name " + lastName);
+        }
+        //          User Email
+        System.out.print("Enter The User Email : ");
+        String userEmail = scanner.nextLine();
+        //Checking for valid last name
+        if (!validateUserEmail(userEmail)) {
+            System.out.println("Invalid User Email");
+        } else {
+            System.out.println("User Email " + userEmail);
         }
     }
 }
