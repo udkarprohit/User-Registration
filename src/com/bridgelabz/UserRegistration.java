@@ -20,11 +20,15 @@ public class UserRegistration {
     public static boolean validatePhoneNumber(String phoneNumber) {
         return phoneNumber.matches("^[+](91)[\\s][0-9]{10}$");
     }
+    // Validate User Password
+    public static boolean validateUserPassword(String userPassword) {
+        return userPassword.matches("^[a-z]{8,}$");
+    }
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        //          First Name
+//                  First Name
         System.out.print("Enter The First Name : ");
         String firstName = scanner.nextLine();
         //Checking for valid first name
@@ -59,6 +63,15 @@ public class UserRegistration {
             System.out.println("Invalid User Phone Number");
         } else {
             System.out.println(" User Phone Number " + phoneNumber);
+        }
+//                  User Password
+        System.out.print("Enter The User Password : ");
+        String userPassword = scanner.nextLine();
+        //Checking for valid Phone Number
+        if (!validateUserPassword(userPassword)) {
+            System.out.println("Invalid User Password");
+        } else {
+            System.out.println("User Password " + userPassword);
         }
     }
 }
