@@ -12,9 +12,13 @@ public class UserRegistration {
     public static boolean validateLastName(String lastName) {
         return lastName.matches("^[A-Z][a-z]{2,}$");
     }
-
+    // Validate User Email
     public static boolean validateUserEmail(String userEmail) {
         return userEmail.matches("^[abc]{3}[.a-z]*[@][bl]{2}[.co]{3}[.a-z]*$");
+    }
+    // Validate User Phone Number
+    public static boolean validatePhoneNumber(String phoneNumber) {
+        return phoneNumber.matches("^[+](91)[\\s][0-9]{10}$");
     }
 
     public static void main(String[] args) {
@@ -41,11 +45,20 @@ public class UserRegistration {
         //          User Email
         System.out.print("Enter The User Email : ");
         String userEmail = scanner.nextLine();
-        //Checking for valid last name
+        //Checking for valid Email
         if (!validateUserEmail(userEmail)) {
             System.out.println("Invalid User Email");
         } else {
             System.out.println("User Email " + userEmail);
+        }
+        //          User Phone Number
+        System.out.print("Enter The User Phone Number : ");
+        String phoneNumber = scanner.nextLine();
+        //Checking for valid Phone Number
+        if (!validatePhoneNumber(phoneNumber)) {
+            System.out.println("Invalid User Phone Number");
+        } else {
+            System.out.println(" User Phone Number " + phoneNumber);
         }
     }
 }
