@@ -14,7 +14,7 @@ public class UserRegistration {
     }
     // Validating User Email
     public static boolean validateUserEmail(String userEmail) {
-        return userEmail.matches("^[abc]{3}[.a-z]*[@][bl]{2}[.co]{3}[.a-z]*$");
+        return userEmail.matches("^[a-z]{3,}[-_+.a-z0-9]*[@][0-1a-z]+[.][a-z]{2,}[.]?[,a-z]{0,3}$");
     }
     // Validate User Phone Number
     public static boolean validatePhoneNumber(String phoneNumber) {
