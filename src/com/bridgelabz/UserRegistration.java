@@ -22,9 +22,8 @@ public class UserRegistration {
     }
     // Validate User Password
     public static boolean validateUserPassword(String userPassword) {
-        return userPassword.matches("^[a-z]{8,}$");
+        return userPassword.matches("^[A-Z][a-z]{8,}$");
     }
-
 
     public static void main(String[] args) {
 
