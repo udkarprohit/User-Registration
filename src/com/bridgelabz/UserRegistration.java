@@ -22,7 +22,7 @@ public class UserRegistration {
     }
     // Validate User Password
     public static boolean validateUserPassword(String userPassword) {
-        return userPassword.matches("^[A-Z][a-z]{7,}[0-9]+$");
+        return userPassword.matches("^[A-Z][a-z]{7,}[0-9]+[@#$%&]$");
     }
 
     public static void main(String[] args) {
