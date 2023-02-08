@@ -12,7 +12,7 @@ public class UserRegistration {
     public static boolean validateLastName(String lastName) {
         return lastName.matches("^[A-Z][a-z]{2,}$");
     }
-    // Validate User Email
+    // Validating User Email
     public static boolean validateUserEmail(String userEmail) {
         return userEmail.matches("^[abc]{3}[.a-z]*[@][bl]{2}[.co]{3}[.a-z]*$");
     }
@@ -24,6 +24,7 @@ public class UserRegistration {
     public static boolean validateUserPassword(String userPassword) {
         return userPassword.matches("^[a-z]{8,}$");
     }
+
 
     public static void main(String[] args) {
 
